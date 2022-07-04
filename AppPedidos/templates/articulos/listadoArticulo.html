@@ -1,0 +1,45 @@
+{% extends "menu.html" %}
+{% load static %}
+
+{% block bloqueacompletar %}
+<br>
+<br>
+
+<div class="card">
+    <div class="card-body">
+    <h3>Listado de Articulos</h3>
+    <table class="table table-striped table-hover table-responsive-sm">
+        <tr>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>UM</th>
+            <th>Marca</th>
+            <th>Precio</th>
+            <th> </th>
+            <th>Opciones</th>
+        </tr>
+        {% for item in entity %}
+        <tr>
+            <td>{{ item.Codigo}} </td>
+            <td>{{ item.Descripcion | title}} </td>
+            <td>{{ item.UnidadMedida }} </td>
+            <td>{{ item.Marca }} </td>
+            <td>${{ item.Precio }} <td>
+            <td>
+                <a href="{% url 'modificar_articulo' item.id %}" class="btn btn-info btn-sm">modificar</a>
+                <a href="{% url 'Eliminar_Articulo' item.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                
+                <!--<a href="#" onclick="EliminarArticulo({{ item.id }})" class="btn btn-danger btn-sm">Eliminar</a>
+                !-->
+                </td> 
+        </tr>
+
+        {% endfor %}
+  
+    </table>
+</div>
+    {% include 'paginador.html' %}
+</div>
+
+{% endblock %}
+

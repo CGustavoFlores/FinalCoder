@@ -1,0 +1,36 @@
+
+{% extends "menu.html" %}
+{% load static %}
+
+{% block bloqueacompletar %}
+<br>
+<br>
+
+<div class="card">
+    <div class="card-body">
+    <h3>Articulos Encontrados</h3>
+    <table class="table table-striped table-hover table-responsive-sm">
+        <tr>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+            <th>UM</th>
+            <th>Marca</th>
+            <th>Precio</th>
+        </tr>
+        {% for item in entity %}
+            <tr>
+                <td>{{ item.Codigo}} </td>
+                <td>{{ item.Descripcion | title}} </td>
+                <td>{{ item.UnidadMedida }} </td>
+                <td>{{ item.Marca }} </td>
+                <td>${{ item.Precio }} <td>
+            </tr>
+        {% endfor %}
+  
+    </table>
+</div>
+
+{% include 'paginador.html' %}
+</div>
+{% endblock %}
+

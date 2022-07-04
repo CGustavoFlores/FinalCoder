@@ -1,0 +1,21 @@
+
+{% extends "menu.html" %}
+{% load static %}
+
+{% block bloqueacompletar %}
+<br>
+<br>
+
+<div class="card">
+    <div class="card-body">
+    <h3>Buscar Articulos</h3>
+    <table class="table table-striped table-hover table-responsive-sm">
+        <form action="buscar" method="GET">
+            <p>Nombre</p>
+            <input type="text" name= "nombre" id="nombre">
+            <input type="submit" value="Buscar">
+        </form>
+    </table>
+
+{% endblock %}
+

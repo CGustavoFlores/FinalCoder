@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <marquee id="ejemplo" direction="left">Trabajo Final para el curso de Python. Alumno Cesar Gustavo Flores    Profesor: Maximiliano    El proyect tiene 2 aplicaciones. Una de pedidos y otra de usuarios. El modulo pedidos tiene los crud de articulos, clientes y pedidos.
+        El modulo de usuarios, AppUsuarios, tiene los formularios de login, logout, registro de usuario y editar perfil.
+        El proyecto ademas, tiene una formulario About, y un formulario de Contacto, que no es necesario estar logueado para poder
+        enviarlo.
+        Con respecto al modulo de pedidos, queda pendiente poder hacer el crud de pedidodetalle, ya que la idea es hacer un crud 
+        de maestro-detalle como una sola transaccion.
+        Tambien se puede ingresar al modulo de Administracion de Django, que lo he personalizado un poco. 
+        Se puede utiliar el usuario "gustavo" con la password "coder123"
+        </marquee>
+                <!-- 
+        <a href="javascript:void(0);" onclick="getElementById('ejemplo').direction='down';">Hacia abajo</a>---<a href="javascript:void(0);" onclick="getElementById('ejemplo').direction='up';">Hacia arriba</a>
+                        !-->
+    <a href="{% url 'Inicio' %}">Cancelar</a>
+</body>
+</html>
+
